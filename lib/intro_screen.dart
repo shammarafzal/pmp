@@ -142,7 +142,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       width: SizeConfig.screenWidth / 4,
                       height: 50,
                       child: CustomButton(title: 'Free Version', onPress: (){
-
+                        Navigator.of(context).pushReplacementNamed('questionScreen');
                       },),
                     ),
                   ),

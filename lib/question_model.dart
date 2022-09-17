@@ -6,15 +6,14 @@ class QuestionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Questions(questionNumber: 'Ques1', question: 'A prompt list is a predetermined list of:', ans1: 'A. Risks',ans2: 'B. Threats', ans3: 'C. Risk Categories', ans4: 'Opportunities');
+    return Questions(question: 'QNo 1: A prompt list is a predetermined list of:', ans1: 'A. Risks',ans2: 'B. Threats', ans3: 'C. Risk Categories', ans4: 'Opportunities');
   }
 }
 
 
 
 class Questions extends StatefulWidget {
-  const Questions({Key? key, required this.questionNumber, required this.question, required this.ans1,required this.ans2, required this.ans3, required this.ans4}) : super(key: key);
-  final questionNumber;
+  const Questions({Key? key, required this.question, required this.ans1,required this.ans2, required this.ans3, required this.ans4}) : super(key: key);
   final question;
   final ans1;
   final ans2;
@@ -30,13 +29,11 @@ class _QuestionsState extends State<Questions> {
   Widget build(BuildContext context) {
     return Column(
         children: [
+
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Align(
-                alignment: Alignment.topLeft,
-                child: Text('${widget.questionNumber}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)),
+            padding: const EdgeInsets.all(10.0),
+            child: Text('${widget.question}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
           ),
-          Text('${widget.question}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
           _myRadioButton(
             title: "${widget.ans1}",
             value: 0,

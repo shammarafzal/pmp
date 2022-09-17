@@ -19,7 +19,8 @@ Future<void> main() async {
       initialRoute: 'intro_screen',
       theme: ThemeData(primarySwatch: Colors.blue),
       routes: {
-        'intro_screen': (context) => QuestionBottom(),
+        'intro_screen': (context) => IntroScreen(),
+        'questionScreen': (context) => QuestionBottom(),
 
 
       },
